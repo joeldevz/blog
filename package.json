@@ -1,0 +1,29 @@
+{
+  "name": "my-personal-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "sagar",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^10.0.7",
+    "react": "~16.13.1",
+    "react-dom": "~16.13.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "gray-matter": "~4.0.2",
+    "postcss": "^8.2.6",
+    "remark-highlight.js": "~6.0.0",
+    "remark-html": "~11.0.2",
+    "remark-parse": "~8.0.2",
+    "tailwindcss": "^2.0.3",
+    "unified": "~9.0.0",
+    "uuid": "~8.1.0"
+  }
+}
