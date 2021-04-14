@@ -3,6 +3,7 @@
 @tailwind utilities;
 html{
     scroll-behavior: smooth;
+    @apply text-lg
 }
 pre{
     @apply bg-gray-900 text-white p-5 rounded-md my-2 w-full overflow-x-auto

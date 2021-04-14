@@ -35,7 +35,7 @@ function BlogPostPage(props) {
           </section>
           <section class="bg-gray-900 py-20">
             <div class="max-w-5xl px-6 mx-auto text-center">
-              <h2 class="text-2xl font-semibold text-gray-800">Latest Posts</h2>
+              <h2 class="text-2xl font-semibold text-gray-50">Latest Posts</h2>
 
               <div class="flex flex-col items-center justify-center mt-6">
                 <a
