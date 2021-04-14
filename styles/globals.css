@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html{
+    scroll-behavior: smooth;
+}
 pre{
     @apply bg-gray-900 text-white p-5 rounded-md my-2 w-full overflow-x-auto
 }
@@ -8,6 +11,18 @@ code {
     @apply w-full
 }
 code .hljs-keyword{
+    @apply text-red-500
+}
+code .hljs-comment{
+    @apply text-gray-500
+}
+code .hljs-title{
+    @apply text-blue-300
+}
+code .hljs-built_in{
+    @apply text-yellow-200
+}
+code .hljs-string{
     @apply text-yellow-500
 }
 .blog h1{

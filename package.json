@@ -11,18 +11,18 @@
   "author": "sagar",
   "license": "ISC",
   "dependencies": {
-    "next": "^10.0.7",
+    "next": "^10.1.2",
     "react": "~16.13.1",
     "react-dom": "~16.13.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.4",
+    "autoprefixer": "^10.2.5",
     "gray-matter": "~4.0.2",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.9",
     "remark-highlight.js": "~6.0.0",
     "remark-html": "~11.0.2",
     "remark-parse": "~8.0.2",
-    "tailwindcss": "^2.0.3",
+    "tailwindcss": "^2.0.4",
     "unified": "~9.0.0",
     "uuid": "~8.1.0"
   }

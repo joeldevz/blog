@@ -40,7 +40,7 @@ const Blog = (props) => {
                         <img
                           class="w-full h-56 object-cover object-center"
                           src={blog.img}
-                          alt="avatar"
+                          alt={blog.title}
                         />
                         <div class="flex items-center px-6 py-3 bg-gray-900">
                           {blog.icon == "javascript" ? (

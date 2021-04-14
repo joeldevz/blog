@@ -7,13 +7,14 @@ import Footer from "../../components/Footer"
 import Share from "../../components/Share"
 
 function BlogPostPage(props) {
-  const { metaTitle, title, content, author,metaDescription } = props.blog;
+  const { metaTitle, title, content, author,meta_description } = props.blog;
+  console.log(meta_description)
   return (
     <>
       <Head>
         <title>{metaTitle}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta namme="description" content={metaDescription}/>
+        <meta namme="description" content={meta_description}/>
       </Head>
       <main class="font-sans bg-white">
         <div>
@@ -29,7 +30,7 @@ function BlogPostPage(props) {
             </div>
           </section>
           <section class=" pattern py-20">
-            <div class="max-w-5xl px-6 mx-auto text-justify blog" dangerouslySetInnerHTML={{ __html: content }}>
+            <div class="max-w-4xl px-6 mx-auto text-justify blog" dangerouslySetInnerHTML={{ __html: content }}>
             </div>
           </section>
           <section class="bg-gray-900 py-20">
