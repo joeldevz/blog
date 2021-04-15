@@ -7,18 +7,18 @@ import Footer from "../../components/Footer"
 import Share from "../../components/Share"
 
 function BlogPostPage(props) {
-  const { metaTitle, title, content, author,meta_description } = props.blog;
+  const { metaTitle, title, content, author, meta_description } = props.blog;
   console.log(meta_description)
   return (
     <>
       <Head>
         <title>{metaTitle}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta namme="description" content={meta_description}/>
+        <meta namme="description" content={meta_description} />
       </Head>
       <main class="font-sans bg-white">
         <div>
-          <NavBlog title={title}/>
+          <NavBlog title={title} />
           <section class="bg-white mt-20">
             <div class="max-w-2xl px-6 text-center mx-auto">
               <h1 class="text-5xl font-semibold text-gray-800">{title}</h1>
@@ -109,9 +109,9 @@ function BlogPostPage(props) {
                     stroke="currentColor"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
@@ -119,8 +119,8 @@ function BlogPostPage(props) {
               </div>
             </div>
           </section>
-    <Footer/>
- </div>
+          <Footer />
+        </div>
       </main>
     </>
   );
