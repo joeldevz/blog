@@ -3,11 +3,12 @@ import Link from "next/link";
 import NavBlog from "../../components/NavBlog";
 import Head from "next/head";
 const Blog = (props) => {
+
   const Icon = {
     javascript: <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
-      className="h-7 w-7 text-white fill-current"
+      className="w-10 m-auto text-white fill-current"
     >
       <path fill="#ffd600" d="M6,42V6h36v36H6z" />
       <path
@@ -18,7 +19,7 @@ const Blog = (props) => {
     nodejs: <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 48 48"
-      className="h-7 w-7 text-white fill-current"
+      className="w-10 m-auto text-white fill-current"
     >
       <path
         fill="#388e3c"
@@ -41,7 +42,7 @@ const Blog = (props) => {
         d="M47.703 21.791l-4.906-2.715C42.705 19.025 42.602 19 42.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C37.114 21.892 37 22.084 37 22.294v5.411c0 .209.114.402.297.503l4.908 2.717c.184.102.409.102.593 0l2.263-1.253c.207-.115.206-.412-.002-.526l-4.924-2.687C40.052 26.412 40 26.325 40 26.231v-2.466c0-.092.05-.177.13-.221l2.235-1.236h-.001c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237c.08.044.13.129.13.221v2.012c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393c.148-.086.24-.245.24-.417v-1.88C48 22.085 47.886 21.892 47.703 21.791zM10.703 21.791l-4.906-2.715C5.705 19.025 5.602 19 5.5 19c-.102 0-.205.025-.297.076h.001l-4.907 2.715C.114 21.892 0 22.084 0 22.294v7.465c0 .086.046.166.121.209.075.042.167.042.242-.001l2.398-1.393C2.909 28.488 3 28.329 3 28.157v-4.393c0-.092.05-.177.13-.221l2.235-1.236H5.365c.042-.023.088-.034.135-.034.047 0 .093.012.135.034l2.235 1.237C7.95 23.588 8 23.673 8 23.765v4.393c0 .172.091.331.24.417l2.398 1.393c.075.043.167.043.242.001C10.954 29.925 11 29.845 11 29.759v-7.464C11 22.085 10.886 21.892 10.703 21.791z"
       />
     </svg>,
-    docker: <img className=" w-14 text-white fill-current" src="img/docker.png" />
+    docker: <img className="m-auto w-14 text-white fill-current" src="img/docker.png" />
   }
   return (
     <>
@@ -74,6 +75,10 @@ const Blog = (props) => {
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
                 {props.blogs.map((blog, idx) => {
+                  console.log(blog.icon)
+                  const icons = blog.icon.map((i) => (
+                    Icon[i]
+                  ))
                   return (
                     <Link href={`/blog/${blog.slug}`} key={idx}>
                       <a className="max-w-sm bg-white m-auto item-center shadow-lg rounded-lg overflow-hidden my-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
@@ -82,11 +87,16 @@ const Blog = (props) => {
                           src={blog.img}
                           alt={blog.title}
                         />
-                        <div className="flex items-center px-6 py-3 bg-gray-900">
-                          {Icon[blog.icon]}
+                        <div className="text-center px-6 py-3 h-full bg-gray-900">
+
                           <h1 className="mx-3 text-white font-semibold text-lg">
                             {blog.title}
                           </h1>
+                          <div className={`grid grid-cols-${icons.length}`}>
+                            {
+                              icons
+                            }
+                          </div>
                         </div>
                       </a>
                     </Link>

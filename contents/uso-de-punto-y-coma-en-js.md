@@ -5,7 +5,7 @@ author: Joeldev
 title: Uso de punto y como en javascript
 slug: uso-de-punto-y-coma-en-js
 date: "19-02-2021"
-icon: javascript
+icon: [javascript]
 ---
 El uso del punto y coma ***__;__*** es un caracter fundamental para muchos lenguajes de programación. En ___ JavaScript ___ no es requerido el uso de este caracter. Tu aplicación funcionará correctamente gracias al [**ASI**](#asd) que explicaremos más adelante. También desmintiremos los siguientes mitos sobre el punto y coma en a *** JavaScript ***.
 
